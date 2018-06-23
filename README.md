@@ -16,7 +16,7 @@ $ docker run -v ~/Projects/exercism:/root/exercism -it --rm exercism
 
 ```Bash
 # Fetch next exercise
-$ docker run -v ~/Projects/exercism:/root/exercism -it --rm exercism fetch swift
+$ docker run -v ~/Projects/exercism:/root/exercism -w /root/exercism -it --rm exercism fetch swift
 
 # Start next exercise
 $ cd ~/Projects/exercism/swift/EXERCISE
@@ -24,7 +24,7 @@ $ swift package generate-xcodeproj
 $ open EXERCISE.xcodeproj
 
 # Submit current exercise
-$ docker run -v ~/Projects/exercism:/root/exercism -it --rm exercism submit swift/EXERCISE/Sources/EXERCISE.swift
+$ docker run -v ~/Projects/exercism:/root/exercism -w /root/exercism -it --rm exercism submit swift/EXERCISE/Sources/EXERCISE.swift
 ```
 
 ## License
