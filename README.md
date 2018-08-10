@@ -9,22 +9,22 @@ Solutions to exercises at exercism.io
 $ docker build . --build-arg EXERCISM_API_KEY="${EXERCISM_API_KEY}" -t exercism
 
 # Create and run one-off container
-$ docker run -v ~/Projects/exercism:/root/exercism -it --rm exercism
+$ docker run -v ~/Developer/exercism:/root/exercism -it --rm exercism
 ```
 
 ## Usage
 
 ```Bash
 # Fetch next exercise
-$ docker run -v ~/Projects/exercism:/root/exercism -w /root/exercism -it --rm exercism fetch swift
+$ docker run -v ~/Developer/exercism:/root/exercism -w /root/exercism -it --rm exercism fetch swift
 
 # Start next exercise
-$ cd ~/Projects/exercism/swift/EXERCISE
+$ cd ~/Developer/exercism/swift/EXERCISE
 $ swift package generate-xcodeproj
 $ open EXERCISE.xcodeproj
 
 # Submit current exercise
-$ docker run -v ~/Projects/exercism:/root/exercism -w /root/exercism -it --rm exercism submit swift/EXERCISE/Sources/EXERCISE.swift
+$ docker run -v ~/Developer/exercism:/root/exercism -w /root/exercism -it --rm exercism submit swift/EXERCISE/Sources/EXERCISE.swift
 ```
 
 ## License
